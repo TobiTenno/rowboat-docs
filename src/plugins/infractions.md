@@ -25,6 +25,7 @@ The infractions plugin provides a set of useful moderator commands. These comman
 | `!slowmo {time in seconds}` | Sets the slowmode time for the channel | Moderator | `!slowmo 10` |
 | `!slowmo 0` | Turn off slowmode for the channel | Moderator | `!slowmo 0` |
 | `!report {message}` | Send a report to a report channel | Everyone | `!report @Tobiah is being a meanie` |
+| `!selfmute {duration}` | Mute yourself for the given duration. Maximum of `2w` | Everyone | `!selfmute 2m` |
 
 ## Configuration Options
 
@@ -37,6 +38,8 @@ The infractions plugin provides a set of useful moderator commands. These comman
 | reason\_edit\_level | Minimum level to allow users to edit other users' infraction reasons | int | 100 |
 | report\_channel | Channel to send reports to | id | none |
 | report\_role | Role to ping for reports | id | none |
+| selfmute | Whether to allow selfmutes | bool | false |
+| selfmute\_max | Maximum duration for a selfmute in seconds.  | int | 1209600 \(2 weeks\) |
 
 ## Configuration Example
 
