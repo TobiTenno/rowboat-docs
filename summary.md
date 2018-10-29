@@ -1,6 +1,6 @@
 # Summary
 
-[Introduction](./)
+[Introduction](src.md)
 
 * [Setting Up Rowboat](setup.md)
 * [General Configuration](general.md)
