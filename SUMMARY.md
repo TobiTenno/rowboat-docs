@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Heimdallr](README.md)
-* [Rowboat](src/README.md)
+* [What is Heimdallr](src/README.md)
   * [plugins](src/plugins/README.md)
     * [Censor Plugin](src/plugins/censor.md)
     * [Spam Plugin](src/plugins/spam.md)

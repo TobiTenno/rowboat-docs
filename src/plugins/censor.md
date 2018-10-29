@@ -29,10 +29,11 @@ This, combined with the Spam plugin can result in a very robust automatic abuse-
 | domains\_blacklist | A blacklist of domain names | list | empty |
 | blocked\_tokens | A list of tokens \(can appear in the middle of words\) that are blacklisted | list | empty |
 | blocked\_words | A list of words \(must be seperated by a boundary\) that are blacklisted | list | empty |
+| blocked\_nicknames | A list of names \(can appear in the middle of nicknames\) that are blacklisted | list | empty |
 
 ## Configuration Example
 
-```text
+```yaml
   censor:
     levels:
       0:
@@ -46,6 +47,7 @@ This, combined with the Spam plugin can result in a very robust automatic abuse-
         domains_blacklist: ['website.net']
         blocked_tokens: ['token1', 'token2']
         blocked_words: ['word1', 'word2', 'word3']
+        blocked_nicknames: ['blurb']
      channels:
       290923757399310337:
         blocked_words: ['word4']
