@@ -22,6 +22,9 @@ The infractions plugin provides a set of useful moderator commands. These comman
 | `!infractions info {inf#}` | Presents information on the given infraction | Moderator | `!infractions info 1274` |
 | `!infractions duration {inf#} {duration}` | Updates the duration of the given infraction. Duration starts from time of initial action | Moderator | `!infractions duration 1274 5h` |
 | `!reason {inf#} {reason}` | Updates the reason of a given infraction | Moderator | `!infractions reason 1274 rude behaviour towards staff` |
+| `!slowmo {time in seconds}` | Sets the slowmode time for the channel | Moderator | `!slowmo 10` |
+| `!slowmo 0` | Turn off slowmode for the channel | Moderator | `!slowmo 0` |
+| `!report {message}` | Send a report to a report channel | Everyone | `!report @Tobiah is being a meanie` |
 
 ## Configuration Options
 
@@ -32,13 +35,16 @@ The infractions plugin provides a set of useful moderator commands. These comman
 | confirm\_actions\_expiry | The duration after which to delete the confirmed action message. If zero the message will never be deleted | int | 0 |
 | mute\_role | Role ID that is set for users who are muted | id | none |
 | reason\_edit\_level | Minimum level to allow users to edit other users' infraction reasons | int | 100 |
+| report\_channel | Channel to send reports to | id | none |
+| report\_role | Role to ping for reports | id | none |
 
 ## Configuration Example
 
-```text
+```yaml
   infractions:
     confirm_actions: false
     mute_role: 289494296703533058
     reason_edit_level: 50
+    report_channel: 297917022300274688
 ```
 
