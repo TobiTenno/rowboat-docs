@@ -30,6 +30,9 @@ This, combined with the Spam plugin can result in a very robust automatic abuse-
 | blocked\_tokens | A list of tokens \(can appear in the middle of words\) that are blacklisted | list | empty |
 | blocked\_words | A list of words \(must be seperated by a boundary\) that are blacklisted | list | empty |
 | blocked\_nicknames | A list of names \(can appear in the middle of nicknames\) that are blacklisted | list | empty |
+| block\_zalgo\_nicknames | Whether to filter nicknames with zalgo text | bool | false |
+|  message\_char\_limit | Maximum allowed message length | int | 0 |
+| warn\_on\_censor | Whether to automatically warn a user when their name or message is censored | bool | false |
 
 ## Configuration Example
 
