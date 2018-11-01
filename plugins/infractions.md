@@ -20,12 +20,16 @@ The infractions plugin provides a set of useful moderator commands. These comman
 | `!infractions archive` | Creates a CSV file of all infractions on the server | Administrator | `!infractions archive` |
 | `!infractions search {query}` | Searches infractions database for given query | Moderator | `!infractions search 232921983317180416` OR `!infractions search rowboat#0001` OR `!infractions search spamming` |
 | `!infractions info {inf#}` | Presents information on the given infraction | Moderator | `!infractions info 1274` |
+| `!inf delete {inf#}` | Delete infraction | Admin | `!inf delete 1274` |
 | `!infractions duration {inf#} {duration}` | Updates the duration of the given infraction. Duration starts from time of initial action | Moderator | `!infractions duration 1274 5h` |
 | `!reason {inf#} {reason}` | Updates the reason of a given infraction | Moderator | `!infractions reason 1274 rude behaviour towards staff` |
 | `!slowmo {time in seconds}` | Sets the slowmode time for the channel | Moderator | `!slowmo 10` |
 | `!slowmo 0` | Turn off slowmode for the channel | Moderator | `!slowmo 0` |
 | `!report {message}` | Send a report to a report channel | Everyone | `!report @Tobiah is being a meanie` |
 | `!selfmute {duration}` | Mute yourself for the given duration. Maximum of `2w` | Everyone | `!selfmute 2m` |
+| `!note add {user} {note}` | Add a note on a user | Mod | `!note add 222617379421683712 omaiwamo shinderu` |
+| `!note delete {inf#}` | Delete note on user | Admin | `!note delete 1275` |
+| `!note info {inf#}` | Get full details on a note | Mod | `!note info 1275` |
 
 ## Configuration Options
 
@@ -40,6 +44,7 @@ The infractions plugin provides a set of useful moderator commands. These comman
 | report\_role | Role to ping for reports | id | none |
 | selfmute | Whether to allow selfmutes | bool | false |
 | selfmute\_max | Maximum duration for a selfmute in seconds.  | int | 1209600 \(2 weeks\) |
+| selfmute\_role | Role ID that is set for users who self-mute | id | none |
 
 ## Configuration Example
 

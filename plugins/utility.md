@@ -8,7 +8,7 @@ The utility plugin provides a number of useful and fun commands
 | :--- | :--- | :--- | :--- |
 | `!cat` | Returns a random image of a cat | Default | `!cat` OR `!kitteh` OR `!kitty` |
 | `!doggo` | Returns a random image of a dog | Default | `!doggo` |
-| !bunny | Returns a random image of a bunny | Default | `!bunny` OR `!bunbun` |
+| `!bunny` | Returns a random image of a bunny | Default | `!bunny` OR `!bunbun` |
 | `!emoji {emoji}` | Returns information on the given emoji | Default | `!emoji :smiley:` |
 | `!info {user}` | Returns information on the given user | Default | `!info 232921983317180416` OR `!info @rowboat#0001` |
 | `!jumbo {emojis}` | Returns 128x128px images of the given emoji | Default | `!jumbo :cat: :dog: :rabbit:` |
