@@ -62,6 +62,7 @@ The modlog plugin provides a mechanisim for logging various events and actions t
 | COMMAND\_USED | A user uses a rowboat command |
 | SPAM\_DEBUG | A user triggered spam protection |
 | CENSORED | A user posted a message that was censored by the bot |
+|  ADD\_NOTE | A note added on a user |
 
 ## Configuration Example
 
