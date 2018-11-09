@@ -30,6 +30,8 @@ The infractions plugin provides a set of useful moderator commands. These comman
 | `!note add {user} {note}` | Add a note on a user | Mod | `!note add 222617379421683712 omaiwamo shinderu` |
 | `!note delete {inf#}` | Delete note on user | Admin | `!note delete 1275` |
 | `!note info {inf#}` | Get full details on a note | Mod | `!note info 1275` |
+| `!inf recent {# recent}` | Get recent infractions | Mod | `!inf recent 5` |
+| `!note archive` | Get an archive of notes | Admin | `!note archive` |
 
 ## Configuration Options
 
@@ -45,7 +47,8 @@ The infractions plugin provides a set of useful moderator commands. These comman
 | selfmute | Whether to allow selfmutes | bool | false |
 | selfmute\_max | Maximum duration for a selfmute in seconds.  | int | 1209600 \(2 weeks\) |
 | selfmute\_role | Role ID that is set for users who self-mute | id | none |
-| notify |  |  |  |
+| notify | Configure what infractions should notify users | dict | none |
+|  hard\_mute\_role | Role ID that is set for users who are hard-muted | id | none |
 
 ## Notify Sub-configuration
 
