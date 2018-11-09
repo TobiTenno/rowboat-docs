@@ -45,6 +45,16 @@ The infractions plugin provides a set of useful moderator commands. These comman
 | selfmute | Whether to allow selfmutes | bool | false |
 | selfmute\_max | Maximum duration for a selfmute in seconds.  | int | 1209600 \(2 weeks\) |
 | selfmute\_role | Role ID that is set for users who self-mute | id | none |
+| notify |  |  |  |
+
+## Notify Sub-configuration
+
+Valid Actions: `WARN`, `TEMPMUTE`, `MUTE`, `TEMPBAN`, `BAN`
+
+| Option | Description | Type | Default |
+| :--- | :--- | :--- | :--- |
+| format | Format for warn notifications. if "true" is specified, it will use the default configuration | string | false |
+| emoji | Emoji to override for the config | string | no\_mouth |
 
 ## Configuration Example
 
@@ -54,5 +64,33 @@ The infractions plugin provides a set of useful moderator commands. These comman
     mute_role: 289494296703533058
     reason_edit_level: 50
     report_channel: 297917022300274688
+    notify:
+      WARN:
+        format: |-
+          {action!s}
+          You have been **{action!s}**
+          **Guild**: {guild.name}
+          **Moderator**: {actor!s}
+          **Reason**: {reason!s}
+      TEMPMUTE:
+        format: |-
+          {action!s}
+          You have been **{action!s}**
+          **Guild**: {guild.name}
+          **Moderator**: {actor!s}
+          **Expires**: {expires} GMT+0
+          **Reason**: {reason!s}
+      MUTE:
+        format: false
+      TEMPBAN:
+        format: |-
+          {action!s}
+          You have been **{action!s}**
+          **Guild**: {guild.name}
+          **Moderator**: {actor!s}
+          **Expires**: {expires} GMT+0
+          **Reason**: {reason!s}
+      BAN:
+        format: true
 ```
 
