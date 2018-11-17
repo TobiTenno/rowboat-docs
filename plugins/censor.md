@@ -33,13 +33,22 @@ This, combined with the Spam plugin can result in a very robust automatic abuse-
 | block\_zalgo\_nicknames | Whether to filter nicknames with zalgo text | bool | false |
 |  message\_char\_limit | Maximum allowed message length | int | 0 |
 | warn\_on\_censor | Whether to automatically warn a user when their name or message is censored | bool | false |
+| zalgo\_channel\_whitelist | Array of channels to whitelist for zalgo messages | id array | empty |
+| invites\_channel\_whitelist | Array of channels to whitelist for invites | id array | empty |
+| domains\_channel\_whitelist | Array of channels to whitelist for domains | id array | empty |
+| words\_channel\_whitelist | Array of channels to whitelist for blocked words | id array | empty |
+| char\_limit\_channel\_whitelist | Array of channels to whitelist for character limit | id array | empty |
+| mute\_violations | This is the only option that needs to be set to enable the feature. Mute a user after so many violations  | bool | false |
+| mute\_violations\_count | Amount of violations before muting | int | 3 |
+| mute\_violations\_interval | How much time the count of violations must occur within for the mute to be enforced | int | 10 |
+| mute\_violations\_duration | How long to temp mute for in seconds | int | 300 |
 
 ## Configuration Example
 
 ```yaml
   censor:
     levels:
-      0:
+      50:
         filter_zalgo: true
         filter_invites: true
         invites_guild_whitelist: [205769246008016897, 272885620769161216]
@@ -51,6 +60,15 @@ This, combined with the Spam plugin can result in a very robust automatic abuse-
         blocked_tokens: ['token1', 'token2']
         blocked_words: ['word1', 'word2', 'word3']
         blocked_nicknames: ['blurb']
+        zalgo_channel_whitelist: [510413274060161024]
+        invites_channel_whitelist: [510413274060161024]
+        domains_channel_whitelist: [510413274060161024]
+        words_channel_whitelist: [510413274060161024]
+        char_limit_channel_whitelist: [510413274060161024]
+        mute_violations: true
+        mute_violations_count: 5
+        mute_violations_interval: 15
+        mute_violations_duration: 600
      channels:
       290923757399310337:
         blocked_words: ['word4']

@@ -14,7 +14,6 @@ The infractions plugin provides a set of useful moderator commands. These comman
 | `!mkick {users] -r [reason]` | Kicks multiple users from the server | Moderator | `!mkick 232921983317180416 80351110224678912 108598213681922048 -r spamming` |
 | `!ban {user} [reason]` | Bans a user from the server | Moderator | `!ban 232921983317180416 spamming` OR `!ban @rowboat#0001 spamming` |
 | `!unban {user} [reason]` | Unbans a user | Moderator | `!unban 232921983317180416` |
-| `!forceban {User ID} [reason]` | Force bans a user who is not currently in the server | Moderator | `!forceban 232921983317180416 spamming` |
 | `!softban {user} [reason]` | Softbans \(bans/unbans\) a user and deletes the user's messages sent within the last 7 days | Moderator | `!softban 232921983317180416 spamming` OR `!softban @rowboat#0001 spamming` |
 | `!tempban {user} {duration} [reason]` | Temporarily bans a user | Moderator | `!tempban 232921983317180416 5h spamming` OR `!tempban @rowboat#0001 5h spamming` |
 | `!infractions archive` | Creates a CSV file of all infractions on the server | Administrator | `!infractions archive` |
@@ -49,6 +48,8 @@ The infractions plugin provides a set of useful moderator commands. These comman
 | selfmute\_role | Role ID that is set for users who self-mute | id | none |
 | notify | Configure what infractions should notify users | dict | none |
 |  hard\_mute\_role | Role ID that is set for users who are hard-muted | id | none |
+| vc\_mute | Whether or not to attempt to move muted user to guild defined AFK channel | bool | false |
+| vc\_mute\_channel | Channel to override guild define AFK channel with. Requires `vc_mute` | id | none |
 
 ## Notify Sub-configuration
 
@@ -67,6 +68,8 @@ Valid Actions: `WARN`, `TEMPMUTE`, `MUTE`, `TEMPBAN`, `BAN`
     mute_role: 289494296703533058
     reason_edit_level: 50
     report_channel: 297917022300274688
+    vc_mute: true
+    vc_mute_channel: 77177426521624576
     notify:
       WARN:
         format: |-

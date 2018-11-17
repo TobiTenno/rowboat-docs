@@ -7,6 +7,7 @@
 * [Moderator Command Quick-Reference](moderator.md)
 * [Setting Up Rowboat](setup.md)
 * [Plugins](plugins/README.md)
+  * [Commands Plugin](plugins/commands-plugin.md)
   * [Censor Plugin](plugins/censor.md)
   * [Spam Plugin](plugins/spam.md)
   * [ModLog Plugin](plugins/modlog.md)
@@ -15,4 +16,5 @@
   * [Admin Plugin](plugins/admin.md)
   * [Utility Plugin](plugins/utility.md)
   * [Infractions Plugin](plugins/infractions.md)
+  * [Tags Plugin](plugins/tags-plugin.md)
 
