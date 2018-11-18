@@ -27,6 +27,8 @@ The admin plugin provides a set of administrator commands that help in moderatin
 | `!emojistats (global / server) most` | Displays the most / least used server emojis in the current guild / globally | Moderator | `!emojistats global most` OR `!emojistats server least` |
 | `!voice log {user}` | Displays a list of a given user's recent voice channel activity | Moderator | `!voice log 232921983317180416` OR `!voice log @rowboat#0001` |
 | `!invites prune [uses]` | Deletes server invites with the given number of uses or less. Cleans 1 and 0 use invites if left blank | Administrator | `!invites prune 5` |
+| `!tracking` | Display roles tracked with members and name | Mod | `!tracking` |
+| `!roleinfo {role}` | Display information about desired role | Mod | `!roleinfo  274266640403791873` |
 
 ## Configuration Options
 
@@ -35,9 +37,10 @@ The admin plugin provides a set of administrator commands that help in moderatin
 | role\_aliases | Aliases which can be used in place of role IDs in commands | dict | empty |
 | group\_roles | Roles which can be joined and left by any user. These roles cannot grant any elevated permissions | dict | empty |
 | locked\_roles | Prevents permission changes from being made to listed roles | list | empty |
-| persist | Controls the member persistance settings | dict | empty |
+| persist | Controls the member persistence settings | dict | empty |
+| tracking | roles to track in the `tracking` command to check membership | list | empty |
 
-### Member Persistance Settings
+### Member Persistence Settings
 
 | Option | Description | Type | Default |
 | :--- | :--- | :--- | :--- |
@@ -63,5 +66,6 @@ The admin plugin provides a set of administrator commands that help in moderatin
       Console: 278972377587515392
       Tabletop: 278972423502561280
     locked_roles: [346471724126044160, 252184905075654657]
+    tracking: [346471724126044160, 252184905075654657]
 ```
 

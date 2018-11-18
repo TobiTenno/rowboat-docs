@@ -1,5 +1,15 @@
 # Changelog
 
+#### 17 November 2018
+
+* Role Info command \(notable perms\)
+* User info enhancement \(notable perms\)
+* Track role counts
+* Avatar command for checking user avatar
+* Increase info timeout
+
+#### 
+
 #### 16 November 2018
 
 * Remove forceban, ban automatically checks it

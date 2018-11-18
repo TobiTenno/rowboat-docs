@@ -19,6 +19,7 @@ The utility plugin provides a number of useful and fun commands
 | `!search {query}` | Searches for usernames that match given query | Default | `!search b1nzy` |
 | `!seen {user}` | Returns the timestamp of when the bot last saw a message from given user | Default | `!seen 232921983317180416` OR `!seen @rowboat#0001` |
 | `!server [guild]` | Returns information on the current server or the Server ID if given | Default | `!server` OR `!server 290923757399310337` |
+| `!avatar {user}` | Displays user's avater | Default | `!avatar b1nzy` |
 
 ## Configuration Example
 
