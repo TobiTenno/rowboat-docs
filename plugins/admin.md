@@ -29,6 +29,8 @@ The admin plugin provides a set of administrator commands that help in moderatin
 | `!invites prune [uses]` | Deletes server invites with the given number of uses or less. Cleans 1 and 0 use invites if left blank | Administrator | `!invites prune 5` |
 | `!tracking` | Display roles tracked with members and name | Mod | `!tracking` |
 | `!roleinfo {role}` | Display information about desired role | Mod | `!roleinfo  274266640403791873` |
+| `!say user {user} {message}` | Send a message from the bot to the user | Administrator | `!say user @blahuser Stop being silly please` |
+| `!say channel {channel} {message}` | Send a message from the bot to the specified channel | Administrator | `!say channel #rewardblah Prepare for the most amazing thing ever` |
 
 ## Configuration Options
 
@@ -39,6 +41,7 @@ The admin plugin provides a set of administrator commands that help in moderatin
 | locked\_roles | Prevents permission changes from being made to listed roles | list | empty |
 | persist | Controls the member persistence settings | dict | empty |
 | tracking | roles to track in the `tracking` command to check membership | list | empty |
+| allow\_say | Whether or not to enable the `say` command | bool | false |
 
 ### Member Persistence Settings
 
