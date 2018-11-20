@@ -1,5 +1,10 @@
 # Changelog
 
+#### 20 November 2018
+
+* Say commands with/enabling config \(`!say channel #channel message` and `!say user @user message`\)
+* Tags as first-class dynamic commands locked to admins.
+
 #### 17 November 2018
 
 * Role Info command \(notable perms\)
