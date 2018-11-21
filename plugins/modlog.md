@@ -25,7 +25,8 @@ The modlog plugin provides a mechanisim for logging various events and actions t
 | include | List of modlog actions to include. If empty this includes all mod log actions | list | empty |
 | exclude | List of modlog actions to exclude. If empty this excludes no mod log actions | list | empty |
 | timestamps | Whether to render timestamps along with loglines | bool | false |
-| timezone | The timezone that timestamps are rendered in. Supported timezones: \([https://gist.github.com/heyalexej/8bf688fd67d7199be4a1682b3eec7568](https://gist.github.com/heyalexej/8bf688fd67d7199be4a1682b3eec7568)\) | timezone | US/Eastern |
+| timezone | The timezone that timestamps are rendered in. [Supported timezones](https://gist.github.com/heyalexej/8bf688fd67d7199be4a1682b3eec7568) | timezone | US/Eastern |
+| custom | Change the logging format if the `CUSTOM` flag is on for the guild | dict | empty |
 
 ## Actions
 
@@ -63,6 +64,8 @@ The modlog plugin provides a mechanisim for logging various events and actions t
 | SPAM\_DEBUG | A user triggered spam protection |
 | CENSORED | A user posted a message that was censored by the bot |
 |  ADD\_NOTE | A note added on a user |
+| SLOWMODE\_ON | Slowmode is enabled \(or altered\) in a channel |
+| SLOWMODE\_OFF | Slowmode is disabled in a channel |
 
 ## Configuration Example
 
@@ -76,5 +79,17 @@ The modlog plugin provides a mechanisim for logging various events and actions t
         include: []
     ignored_users: [202217402635780096]
     new_member_threshold: 86400
+    custom:
+      MESSAGE_EDIT:
+        emoji: pencil
+        format: |-
+          **{e.author!s}'s** (**ID:** {e.author.id}) messages was edited in **{e.channel.mention}** ({e.channel} | {e.channel.id}):
+          **B:**
+          ```
+          {before!s}
+          ```
+          **A:**
+          ```
+          {after!s}
 ```
 
