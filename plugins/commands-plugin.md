@@ -1,7 +1,7 @@
 ---
 description: >-
   Controls usage of commands by level, channel, etc. There is a special case for
-  the `tags-usr` name, which controls all tag usage.
+  the name, which controls all tag usage.
 ---
 
 # Commands Plugin
@@ -24,7 +24,7 @@ description: >-
 | out | Output options | dict | empty |
 | out -&gt; channels | list of channels to whitelist | snowflake array | empty |
 
-
+`name` allows for a command name, custom command/tag name, or `tags-usr` to represent the level for all tags.
 
 ## Overrides Configuration Options
 
