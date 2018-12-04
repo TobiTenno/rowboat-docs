@@ -1,5 +1,10 @@
 # Changelog
 
+#### 3 Dec 2018
+
+* Allow tags to have a role whitelisted wherein that role can run tags anywhere
+* Allow commands to be whitelisted for a role to run it anywhere
+
 #### 20 November 2018
 
 * Say commands with/enabling config \(`!say channel #channel message` and `!say user @user message`\)

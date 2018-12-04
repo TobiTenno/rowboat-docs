@@ -22,9 +22,12 @@ description: >-
 | group | Command group to  whitelist | string | empty |
 | plugin.name | Name of the plugin to whitelist | string | empty |
 | out | Output options | dict | empty |
-| out -&gt; channels | list of channels to whitelist | snowflake array | empty |
+| out -&gt; channels | list of channels to whitelist | snowflake list | empty |
+| out -&gt; roles | whitelisted roles | snowflake list | empty |
 
 `name` allows for a command name, custom command/tag name, or `tags-usr` to represent the level for all tags.
+
+`tags-usr-allowed-roles` allows specification for a role to be able to run tags in general
 
 ## Overrides Configuration Options
 

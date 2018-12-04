@@ -9,6 +9,10 @@ The tags plugin allows the ability to provide a custom command response to a set
 | Name | Description | Default Level | Usage |
 | :--- | :--- | :--- | :--- |
 | `!tags create` | Adds a warning infraction to a user | Trusted | `!tags add yes yes` OR `!tags create wow oh yes` |
+| `!tags show {tag}` | Get the content of a tag | Trusted | `!tags show popcorn`   OR `!tags popcorn` |
+| `!tags remove {tag}` | Remove tag by name | Trusted | `!tags remove popcorn` |
+| `!tags info {tag}` | Get information on a tag | Trusted | `!tags info popcorn` |
+| `!tags all` | List all tags for the server | Trusted | `!tags all` |
 
 ## Configuration Options
 
