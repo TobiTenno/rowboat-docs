@@ -5,7 +5,7 @@
 * [Summary](summary.md)
 * [General Configuration](general.md)
 * [Moderator Command Quick-Reference](moderator.md)
-* [Setting Up Rowboat](setup.md)
+* [Setting Up Heimdallr](setup.md)
 * [Plugins](plugins/README.md)
   * [Commands Plugin](plugins/commands-plugin.md)
   * [Censor Plugin](plugins/censor.md)

@@ -1,4 +1,4 @@
-# Setting Up Rowboat
+# Setting Up Heimdallr
 
 ## Adding the Bot
 
