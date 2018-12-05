@@ -4,6 +4,11 @@
 
 * Added custom commands plugin page with detail about configuration
 * Added slowmode notes to admin plugin
+* Added floof command notes to utilities
+* Added aliases to cat and dog commands
+* Noted that when search returns a single result it will automatically turn into the info command
+* Added detail to infractions regarding hard\_mute\_ignore option
+* Added detail to infractions regarding temprole command
 
 #### 3 Dec 2018
 

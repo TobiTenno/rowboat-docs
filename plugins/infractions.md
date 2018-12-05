@@ -21,16 +21,21 @@ The infractions plugin provides a set of useful moderator commands. These comman
 | `!infractions info {inf#}` | Presents information on the given infraction | Moderator | `!infractions info 1274` |
 | `!inf delete {inf#}` | Delete infraction | Admin | `!inf delete 1274` |
 | `!infractions duration {inf#} {duration}` | Updates the duration of the given infraction. Duration starts from time of initial action | Moderator | `!infractions duration 1274 5h` |
-| `!reason {inf#} {reason}` | Updates the reason of a given infraction | Moderator | `!infractions reason 1274 rude behaviour towards staff` |
+| `!infractions reason {inf#} {reason}` | Updates the reason of a given infraction | Moderator | `!infractions reason 1274 rude behaviour towards staff` |
 | `!slowmo {time in seconds}` | Sets the slowmode time for the channel | Moderator | `!slowmo 10` |
 | `!slowmo 0` | Turn off slowmode for the channel | Moderator | `!slowmo 0` |
 | `!report {message}` | Send a report to a report channel | Everyone | `!report @Tobiah is being a meanie` |
-| `!selfmute {duration}` | Mute yourself for the given duration. Maximum of `2w` | Everyone | `!selfmute 2m` |
+| `!selfmute / muteself {duration}` | Mute yourself for the given duration. Maximum of `2w` | Everyone | `!selfmute 2m` |
 | `!note add {user} {note}` | Add a note on a user | Mod | `!note add 222617379421683712 omaiwamo shinderu` |
 | `!note delete {inf#}` | Delete note on user | Admin | `!note delete 1275` |
 | `!note info {inf#}` | Get full details on a note | Mod | `!note info 1275` |
+| `!note search {query}` | Search for a note with the specified query | Mod | `!note search @user1` |
 | `!inf recent {# recent}` | Get recent infractions | Mod | `!inf recent 5` |
 | `!note archive` | Get an archive of notes | Admin | `!note archive` |
+| `!temprole {user} {role} {duration} {reason}` | Adds a role temporarily to a user | Mod | `!temprole @user1 StronkRole 1h stronk for 1h` |
+| `!hardmute enable {user} {reason}` | Hard mutes a user | Mod | `!hardmute enable @user1 being really silly` |
+| `!hardmute temp {user} {duration} {reason}` | Hard mutes a user temporarily | Mod | `!hardmute temp @user1 6h being really silly` |
+| `!hardmute disable {user}` | Disables an active hard mute on a user | Mod | `!hardmute disable @user1` |
 
 ## Configuration Options
 
@@ -47,7 +52,8 @@ The infractions plugin provides a set of useful moderator commands. These comman
 | selfmute\_max | Maximum duration for a selfmute in seconds.  | int | 1209600 \(2 weeks\) |
 | selfmute\_role | Role ID that is set for users who self-mute | id | none |
 | notify | Configure what infractions should notify users | dict | none |
-|  hard\_mute\_role | Role ID that is set for users who are hard-muted | id | none |
+| hard\_mute\_role | Role ID that is set for users who are hard-muted | id | none |
+| hard\_mute\_ignore | Users belonging to any of the defined role id's will ignore any hard mutes | list id | \[\] |
 | vc\_mute | Whether or not to attempt to move muted user to guild defined AFK channel | bool | false |
 | vc\_mute\_channel | Channel to override guild define AFK channel with. Requires `vc_mute` | id | none |
 

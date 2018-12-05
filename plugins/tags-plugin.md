@@ -1,6 +1,7 @@
 # Tags Plugin
 
-The tags plugin allows the ability to provide a custom command response to a set command.
+The tags plugin allows the ability to provide a custom command response to a set command.  
+A tag can also be run directly with its name and the guild prefix such as `!mytag`
 
 #### 
 
@@ -27,5 +28,47 @@ The tags plugin allows the ability to provide a custom command response to a set
   tags:
     max_tag_length: 100
     min_level_remove_others: 55
+```
+
+## Hardening Example
+
+Tags can be hardened by using the Commands Plugin option for overrides and lockdown. The name `tags-usr` can be defined to specify all created tags running directly. An example of a hardened configuration is as follows
+
+```text
+commands:
+  overrides:
+  - name: tags-usr
+    out:
+      level: 100
+  - plugin.name: tags
+    out:
+      level: 100
+  lockdown:
+  - name: tags-usr
+    out:
+      channels: [384869993789128704]
+```
+
+If you want to leak channels you can leak the name as the override or lockdown such as below
+
+```text
+commands:
+  overrides:
+  - name: tags-usr
+    out:
+      level: 100
+  - name: mytag
+    out:
+      level: 0
+  - plugin.name: tags
+    out:
+      level: 100
+  lockdown:
+  - name: tags-usr
+    out:
+      channels: [384869993789128704]
+  - name: mytag
+    out:
+      channels: [987230980342345423]
 ```
 
