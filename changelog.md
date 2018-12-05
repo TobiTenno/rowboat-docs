@@ -1,5 +1,10 @@
 # Changelog
 
+#### 5 Dec 2018
+
+* Added custom commands plugin page with detail about configuration
+* Added slowmode notes to admin plugin
+
 #### 3 Dec 2018
 
 * Allow tags to have a role whitelisted wherein that role can run tags anywhere

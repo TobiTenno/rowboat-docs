@@ -31,6 +31,7 @@ The admin plugin provides a set of administrator commands that help in moderatin
 | `!roleinfo {role}` | Display information about desired role | Mod | `!roleinfo  274266640403791873` |
 | `!say user {user} {message}` | Send a message from the bot to the user | Administrator | `!say user @blahuser Stop being silly please` |
 | `!say channel {channel} {message}` | Send a message from the bot to the specified channel | Administrator | `!say channel #rewardblah Prepare for the most amazing thing ever` |
+| `!slowmode / slowmo / slownova {duration} [reason]` | Sets slowmode in the current channel for the {duration}. The duration must be between 0 and 120. Setting the duration to 0 will remove the slowmode in the channel | Mod | `!slowmode 10 People are speaking over each other` |
 
 ## Configuration Options
 

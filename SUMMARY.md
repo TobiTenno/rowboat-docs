@@ -17,5 +17,6 @@
   * [Utility Plugin](plugins/utility.md)
   * [Infractions Plugin](plugins/infractions.md)
   * [Tags Plugin](plugins/tags-plugin.md)
+  * [Custom Commands Plugin](plugins/custom-commands-plugin.md)
 * [Changelog](changelog.md)
 
