@@ -84,3 +84,75 @@ plugins:
         blocked_words: ['word1', 'word2', 'word3']
 ```
 
+
+
+## Example Minimum config
+
+```yaml
+commands:
+  prefix: '!'
+
+levels:
+  180768265633660928: 100   # Server Admin Role Id
+  131682843326808064: 99    # server admin bot Role Id
+  274266640403791873: 60    # Senior Moderator Role Id
+  77190254141911040: 50     # Moderator Role Id
+  335114792820015106: 10    # Bot Role Id
+
+nickname: C3PHAL0N
+
+plugins:
+  admin:
+    confirm_actions: true
+    confirm_actions_reaction: true
+    mute_role: 335132902025330688 # Mute Role
+    reason_edit_level: 60
+    temp_mute_role: 335132902025330688
+  
+    
+  infractions:
+    confirm_actions: true
+    confirm_actions_expiry: 10
+    confirm_actions_reaction: true
+    mute_role: 335132902025330688 # Mute Role Id
+    reason_edit_level: 60
+    temp_mute_role: 335132902025330688 # Mute Role Id
+    
+    notify:
+      WARN:
+        format: true
+      BAN:
+        format: true
+      TEMPMUTE:
+        format: true
+      MUTE:
+        format: true
+      TEMPBAN:
+         format: true
+    
+  modlog:
+    channels:
+      171383278048247808: # Your server log
+        exclude: []
+        compact: false
+        timestamps: true
+  utilities: {}
+web:
+  76685590585671680: admin      # Tobiah
+```
+
+### Example just to get going
+
+```text
+commands:
+  prefix: '!'
+​
+levels:
+  180768265633660928: 100   # Your role id
+​
+plugins:
+  utilities: {}
+web:
+  76685590585671680: admin      # Tobiah
+```
+
