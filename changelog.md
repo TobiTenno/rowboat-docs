@@ -1,10 +1,10 @@
 # Changelog
 
-#### 5 Dec 2018
+#### 6 Dec 2018
 
 * Added channel\_whitelist config option to spam filtering
 
-#### 6 Dec 2018
+#### 5 Dec 2018
 
 * Added custom commands plugin page with detail about configuration
 * Added slowmode notes to admin plugin
