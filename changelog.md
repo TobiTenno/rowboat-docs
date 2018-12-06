@@ -2,6 +2,10 @@
 
 #### 5 Dec 2018
 
+* Added channel\_whitelist config option to spam filtering
+
+#### 6 Dec 2018
+
 * Added custom commands plugin page with detail about configuration
 * Added slowmode notes to admin plugin
 * Added floof command notes to utilities
@@ -36,4 +40,6 @@
 * Restrict commands to specific channels
 * Whitelist channels from incurring specific censors
 * Automatically move muted user to AFK or override VC
+
+
 

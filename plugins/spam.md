@@ -34,6 +34,7 @@ The spam plugin allows administrators and moderators to limit spam and enforce p
 | clean | Whether or not the offending messages which triggered spam detection should be deleted | bool | false |
 | clean\_count | Maximum number of messages to be deleted | int | 100 |
 | clean\_duration | Maximum duration \(in seconds\) for which to delete messages | int | 900 |
+| channel\_whitelist | Allows channels to be whitelisted either within the level or each individual filter | snowflake list | \[\] |
 
 ## Configuration Example
 
@@ -46,6 +47,7 @@ The spam plugin allows administrators and moderators to limit spam and enforce p
         clean: true
         clean_count: 50
         clean_duration: 500
+        channel_whitelist: [390107999022350336]
         max_messages:
           count: 10
           interval: 7
@@ -64,8 +66,10 @@ The spam plugin allows administrators and moderators to limit spam and enforce p
         max_newlines:
           count: 60
           interval: 120
+          channel_whitelist: [439205512425504771]
         max_duplicates:
           count: 5
           interval: 30
+          channel_whitelist: [439205512425504771]
 ```
 
