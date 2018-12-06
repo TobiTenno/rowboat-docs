@@ -10,3 +10,24 @@ There is some functionality you have to enable via command line, such as adding 
 docker-compose exec web ./manage.py add-global-admin USER_ID_HERE
 ```
 
+
+
+### Add Guild Flags
+
+```bash
+docker-compose exec web ./manage.py wh-add GUILD_ID_HERE FLAG_HERE
+```
+
+#### Remove Guild Flags
+
+```bash
+docker-compose exec web ./manage.py wh-rmv GUILD_ID_HERE FLAG_HERE
+```
+
+#### Valid Guild Flags
+
+| Option | Description |
+| :--- | :--- |
+| MODLOG\_CUSTOM\_FORMAT | Allows the modlog custom format |
+| MUSIC | Does nothing |
+
