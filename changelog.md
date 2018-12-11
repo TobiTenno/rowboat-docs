@@ -1,5 +1,10 @@
 # Changelog
 
+#### 10 Dec 2018
+
+* Added  exclude\_msg\_usr to allow excluding a user from logging
+* Alias for `clean all` as `clear all`
+
 #### 6 Dec 2018
 
 * Added channel\_whitelist config option to spam filtering

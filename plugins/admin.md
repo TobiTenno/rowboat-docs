@@ -16,7 +16,7 @@ The admin plugin provides a set of administrator commands that help in moderatin
 | `!archive (here / all) [count]` | Archives \[count\] many messages in the current channel | Moderator | `!archive all 50` OR `!archive here 50` |
 | `!archive user {user} [count]` | Archives \[count\] many messages that a given user sent in the current guild | Moderator | `!archive user 232921983317180416 100` OR `!archive user @rowboat#0001 100` |
 | `!archive channel {channel} [count]` | Archives \[count\] many messages in the given channel | Moderator | `!archive channel 289482554250100736 20` |
-| `!clean all [count]` | Cleans \(deletes\) \[count\] many messages in the current channel | Moderator | `!clean all 20` |
+| `!clean/clar all [count]` | Cleans \(deletes\) \[count\] many messages in the current channel | Moderator | `!clean all 20` |
 | `!clean user {user} [count]` | Cleans \[count\] many messages a given user sent in the current channel | Moderator | `!clean user 232921983317180416 50` |
 | `!clean bots [count]` | Cleans \[count\] many messages sent by bots in the current channel | Moderator | `!clean bots 30` |
 | `!clean cancel` | Cancels any cleaning process running in current channel | Moderator | `!clean cancel` |

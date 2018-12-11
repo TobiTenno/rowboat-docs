@@ -13,6 +13,7 @@ description: >-
 | lockdown | A mapping of commands and channels to whitelist | dict | empty |
 | prefix | A mapping of channels to Censor Configurations | dict | empty |
 | overrides | Command overrides  | dict | empty |
+| exclude\_msg\_user | Ignore logging for users | snowflake list | empty |
 
 ## Lockdown Configuration Options
 
