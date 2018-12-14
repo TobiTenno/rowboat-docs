@@ -39,10 +39,12 @@ The admin plugin provides a set of administrator commands that help in moderatin
 | :--- | :--- | :--- | :--- |
 | role\_aliases | Aliases which can be used in place of role IDs in commands | dict | empty |
 | group\_roles | Roles which can be joined and left by any user. These roles cannot grant any elevated permissions | dict | empty |
+| group\_confirm\_reactions | Confirm group joins by users | bool | false |
 | locked\_roles | Prevents permission changes from being made to listed roles | list | empty |
 | persist | Controls the member persistence settings | dict | empty |
 | tracking | roles to track in the `tracking` command to check membership | list | empty |
-| allow\_say | Whether or not to enable the `say` command | bool | false |
+| allow\_say | Whether or not to enable the `say` command | bool | False |
+| confirm\_actions | Confirm when actions are performed | bool | True |
 
 ### Member Persistence Settings
 
