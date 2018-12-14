@@ -1,5 +1,10 @@
 # Changelog
 
+#### 14 Dec 2018
+
+* Added `dm_denied` option, allowing server owners to have the bot DM the users who attempt to use commands that are denied, or to leave it silent. \(True notifies, False does not\)
+* Added `global_blacklist` and `local_blacklist`, allowing bot owner and server owners, respectively, to provide a list of users for the bot to ignore globally and per-server, respectively.
+
 #### 10 Dec 2018
 
 * Added  exclude\_msg\_usr to allow excluding a user from logging

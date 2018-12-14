@@ -14,6 +14,9 @@ description: >-
 | prefix | A mapping of channels to Censor Configurations | dict | empty |
 | overrides | Command overrides  | dict | empty |
 | exclude\_msg\_user | Ignore logging for users | snowflake list | empty |
+| dm\_denied | Whether or not to DM a user when their command is denied | bool | True |
+| global\_blacklist | A list of users ignored from using the bot globally. Only applies if set in the control guild, not per-server. | list | empty |
+| local\_blacklist | A list of users ignored from using the bot on this server. | list | empty |
 
 ## Lockdown Configuration Options
 
