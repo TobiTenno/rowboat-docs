@@ -71,5 +71,12 @@ description: >-
     - plugin.name: admin
       out:
         channels: [510415911560282132, 511870279157284874]
+    dm_denied: true
+    global_blacklist:
+      - 76012696633348096
+      - 76685590585671680
+    local_blacklist:
+      - 132256368353607681
+      - 324841099090853888
 ```
 
