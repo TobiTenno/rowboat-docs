@@ -32,6 +32,7 @@ The admin plugin provides a set of administrator commands that help in moderatin
 | `!say user {user} {message}` | Send a message from the bot to the user | Administrator | `!say user @blahuser Stop being silly please` |
 | `!say channel {channel} {message}` | Send a message from the bot to the specified channel | Administrator | `!say channel #rewardblah Prepare for the most amazing thing ever` |
 | `!slowmode / slowmo / slownova {duration} [reason]` | Sets slowmode in the current channel for the {duration}. The duration must be between 0 and 120. Setting the duration to 0 will remove the slowmode in the channel | Mod | `!slowmode 10 People are speaking over each other` |
+| `!override [duration] [inguild]` | Enable global admin override for duration. Providing `Any` will allow global admin to override and use commands in any guild. | Global Admin | `!override 30 in any` OR `!override 30 in all` OR `!override 30 in 77176186148499456` |
 
 ## Configuration Options
 

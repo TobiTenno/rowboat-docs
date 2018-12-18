@@ -1,5 +1,11 @@
 # Changelog
 
+#### 18 Dec 2018
+
+* Added control messages for dm's to the bot
+* Added control message for global admin going live
+* Added override command for global admins to have to use override command to enable override mode in specific servers or all. \(Sends a control message, no more than 3600s\)
+
 #### 14 Dec 2018
 
 * Added `dm_denied` option, allowing server owners to have the bot DM the users who attempt to use commands that are denied, or to leave it silent. \(True notifies, False does not\)
