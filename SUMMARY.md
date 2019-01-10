@@ -7,6 +7,7 @@
 * [Moderator Command Quick-Reference](moderator.md)
 * [Setting Up Heimdallr](setup.md)
 * [Plugins](plugins/README.md)
+  * [Core/Global Commands](plugins/core-global-commands.md)
   * [Commands Plugin](plugins/commands-plugin.md)
   * [Censor Plugin](plugins/censor.md)
   * [Spam Plugin](plugins/spam.md)
@@ -18,6 +19,7 @@
   * [Infractions Plugin](plugins/infractions.md)
   * [Tags Plugin](plugins/tags-plugin.md)
   * [Custom Commands Plugin](plugins/custom-commands-plugin.md)
+  * [SQL Plugin](plugins/sql-plugin.md)
 * [Changelog](changelog.md)
 * [CLI Interface](cli-interface.md)
 

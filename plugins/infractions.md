@@ -36,6 +36,10 @@ The infractions plugin provides a set of useful moderator commands. These comman
 | `!hardmute enable {user} {reason}` | Hard mutes a user | Mod | `!hardmute enable @user1 being really silly` |
 | `!hardmute temp {user} {duration} {reason}` | Hard mutes a user temporarily | Mod | `!hardmute temp @user1 6h being really silly` |
 | `!hardmute disable {user}` | Disables an active hard mute on a user | Mod | `!hardmute disable @user1` |
+| `!mban {users] -r [reason]` | Bans multiple users from the server | Moderator | `!mban 232921983317180416 80351110224678912 108598213681922048 -r spamming` |
+| `!munban {users] -r [reason]` | Unbans multiple users from the server | Moderator | `!munban 232921983317180416 80351110224678912 108598213681922048 -r spamming` |
+| `!mmute {users] -r [reason]` | Mutes multiple users on the server | Moderator | `!mmute 232921983317180416 80351110224678912 108598213681922048 -r spamming` |
+| `!munmute {users] -r [reason]` | Unmute multiple users on the server | Moderator | `!munmute 232921983317180416 80351110224678912 108598213681922048 -r spamming` |
 
 ## Configuration Options
 

@@ -1,5 +1,26 @@
 # Changelog
 
+#### 10 Jan 2018
+
+* `shut`/`unshut` commands to force everyone to PTT \(once discord fixes its bug, it will make no one able to speak\)
+* `force setup` for a guild in cases where admins on the server cannot run it or there is an error doing it the traditional way.
+
+#### 4 Jan 2018
+
+* Cease/uncease \(yeet/yote\) commands to lock down channel or guild easily.
+* Move archive and backup commands to admin level
+* Global admin command override
+* Advanced user info search
+* Advanced infraction search
+* Advanced user infraction lookup
+* Bot status setting
+* Documentation for whitelisting/unwhitelisting
+* Guild Flag editing
+* Mass unban/ban/mute/unmute commands
+* Document some sql plugin commands
+* SQL optimizations
+* Frontend statistics support
+
 #### 18 Dec 2018
 
 * Added control messages for dm's to the bot
