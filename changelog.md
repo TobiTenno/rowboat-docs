@@ -20,6 +20,7 @@
 * Document some sql plugin commands
 * SQL optimizations
 * Frontend statistics support
+* `!timeleft` to allow muted users to check remaining time
 
 #### 18 Dec 2018
 

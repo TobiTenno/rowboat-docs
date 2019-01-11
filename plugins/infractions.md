@@ -40,6 +40,7 @@ The infractions plugin provides a set of useful moderator commands. These comman
 | `!munban {users] -r [reason]` | Unbans multiple users from the server | Moderator | `!munban 232921983317180416 80351110224678912 108598213681922048 -r spamming` |
 | `!mmute {users] -r [reason]` | Mutes multiple users on the server | Moderator | `!mmute 232921983317180416 80351110224678912 108598213681922048 -r spamming` |
 | `!munmute {users] -r [reason]` | Unmute multiple users on the server | Moderator | `!munmute 232921983317180416 80351110224678912 108598213681922048 -r spamming` |
+| `!timeleft` | Allow muted user to check their remaining time in their mute | Default | `!timeleft` |
 
 ## Configuration Options
 
