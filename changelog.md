@@ -1,5 +1,9 @@
 # Changelog
 
+#### 14 Jan 2018
+
+* Mobile modding, requires `mobile_mod_channel` to be configured in the admin plugin, allows initiation of mod actions via `!minfo {user id}` or reacting with 🔗 \(link emote\) on a message. The bot will walk the mod through moderation options
+
 #### 10 Jan 2018
 
 * `shut`/`unshut` commands to force everyone to PTT \(once discord fixes its bug, it will make no one able to speak\)
