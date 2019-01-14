@@ -37,6 +37,8 @@ The admin plugin provides a set of administrator commands that help in moderatin
 | `!uncease` `[guild]` | Restore send message perms to default value for the channel, or enable for the guild everyone role if `guild` is specified | Mod | `!uncease` OR `!uncease guild` |
 | `!shut` | If called while in a voice chat, restricts the speak and use voice activation perms. \(Due to a discord bug, this does not immediately mute everyone, but forces everyone to Push-to-Talk\) | Mod | `!shut` |
 | `!unshut` | Removes restrictions on speak and voice activation detection for the `@everyone` role. Must be in the voice channel. | Mod | `!unshut` |
+| `!minfo {user}` | Mobile Mod trigger on user | Mod | `!minfo 76685590585671680` |
+|  🔗reaction | Mobile Mod trigger on user | Mod | React to message with 🔗 |
 
 ## Configuration Options
 
@@ -50,6 +52,7 @@ The admin plugin provides a set of administrator commands that help in moderatin
 | tracking | roles to track in the `tracking` command to check membership | list | empty |
 | allow\_say | Whether or not to enable the `say` command | bool | False |
 | confirm\_actions | Confirm when actions are performed | bool | True |
+| mobile\_mod\_channel | Channel to direct mobile modding dialog to go to | snowflake | None |
 
 ### Member Persistence Settings
 
