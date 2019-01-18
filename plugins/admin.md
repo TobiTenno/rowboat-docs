@@ -53,6 +53,7 @@ The admin plugin provides a set of administrator commands that help in moderatin
 | allow\_say | Whether or not to enable the `say` command | bool | False |
 | confirm\_actions | Confirm when actions are performed | bool | True |
 | mobile\_mod\_channel | Channel to direct mobile modding dialog to go to | snowflake | None |
+| onjoin\_roles | List of roles to automatically apply on a user joining | list | empty |
 
 ### Member Persistence Settings
 

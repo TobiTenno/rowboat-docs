@@ -1,15 +1,22 @@
 # Changelog
 
-#### 14 Jan 2018
+#### 18 Jan 2019
+
+* We're in 2019, oops, Tobiah put Jan 2018.
+* Better spotify support for info command
+* Duck command _cringe_
+* Automatically add roles on user join with `onjoin_roles` in admin plugin
+
+#### 14 Jan 2019
 
 * Mobile modding, requires `mobile_mod_channel` to be configured in the admin plugin, allows initiation of mod actions via `!minfo {user id}` or reacting with 🔗 \(link emote\) on a message. The bot will walk the mod through moderation options
 
-#### 10 Jan 2018
+#### 10 Jan 2019
 
 * `shut`/`unshut` commands to force everyone to PTT \(once discord fixes its bug, it will make no one able to speak\)
 * `force setup` for a guild in cases where admins on the server cannot run it or there is an error doing it the traditional way.
 
-#### 4 Jan 2018
+#### 4 Jan 2019
 
 * Cease/uncease \(yeet/yote\) commands to lock down channel or guild easily.
 * Move archive and backup commands to admin level
