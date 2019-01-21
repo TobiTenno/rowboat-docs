@@ -54,6 +54,7 @@ The admin plugin provides a set of administrator commands that help in moderatin
 | confirm\_actions | Confirm when actions are performed | bool | True |
 | mobile\_mod\_channel | Channel to direct mobile modding dialog to go to | snowflake | None |
 | onjoin\_roles | List of roles to automatically apply on a user joining | list | empty |
+| welcomes | Allows configuration of guild welcomes when a member joins the server | dict | empty |
 
 ### Member Persistence Settings
 
@@ -64,9 +65,25 @@ The admin plugin provides a set of administrator commands that help in moderatin
 | nickname | Whether to recover the nickname when a user rejoins the server | bool | false |
 | voice | Whether to recover mute/deafen settings when a user rejoins the server | bool | false |
 
+### Welcome Settings
+
+| Option | Description | Type | Default |
+| :--- | :--- | :--- | :--- |
+| msg | Content of the message that will be sent when a member joins the guild | unicode | None |
+| dm | If the message should be a dm or not | bool | False |
+
+### Message Tokens
+
+| Token | Description |
+| :--- | :--- |
+| {user} | Will mention the user |
+| {server} | Will include the server name |
+| {channel} | Will link the current channel |
+| {c&lt;snowflake&gt;} | Will link the specified channel |
+
 ## Configuration Example
 
-```text
+```yaml
   admin:
     persist:
       roles: true
@@ -82,5 +99,18 @@ The admin plugin provides a set of administrator commands that help in moderatin
       Tabletop: 278972423502561280
     locked_roles: [346471724126044160, 252184905075654657]
     tracking: [346471724126044160, 252184905075654657]
+    welcomes:
+      238947029384908908234:
+        msg: |-
+          Welcome to the {server}, we've got fun and games, {user}.
+          Please read {c29837890467823647978} for more info.
+          You have joined {channel}!
+        dm: false
+      00000000000000000000:
+        msg: |-
+          Hello {user}! Welcome to the {server}. Don't forget to check out {c238947029384908908234}
+        dm: true
 ```
+
+
 
