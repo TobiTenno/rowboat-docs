@@ -1,5 +1,9 @@
 # Changelog
 
+#### 20 Jan 2019
+
+* Welcome message config - per-channel, dm or not, replacements for server/user/channel
+
 #### 18 Jan 2019
 
 * We're in 2019, oops, Tobiah put Jan 2018.
