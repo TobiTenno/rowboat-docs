@@ -1,5 +1,12 @@
 # Changelog
 
+
+
+#### 24 Jan 2019
+
+* Added roles, categories to command lockdown
+* Added channel and category blacklists to command lockdown
+
 #### 20 Jan 2019
 
 * Welcome message config - per-channel, dm or not, replacements for server/user/channel

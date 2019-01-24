@@ -27,6 +27,10 @@ description: >-
 | plugin.name | Name of the plugin to whitelist | string | empty |
 | out | Output options | dict | empty |
 | out -&gt; channels | list of channels to whitelist | snowflake list | empty |
+| out -&gt; category | list of channel categories to whitelist | snowflake list | empty |
+| out -&gt; roles | list of roles to whitelist | snowflake list | empty |
+| out -&gt; exclude\_channels | list of channels to blacklist | snowflake list | empty |
+| out -&gt; exclude\_category | list of channel categories to blacklist | snowflake list | empty |
 | out -&gt; roles | whitelisted roles | snowflake list | empty |
 
 `name` allows for a command name, custom command/tag name, or `tags-usr` to represent the level for all tags.
@@ -68,6 +72,8 @@ description: >-
     - group: infractions
       out:
         channels: [510415911560282132, 511870279157284874]
+        category: [32498723498049874]
+        roles: [9872389732498023409]
     - plugin.name: admin
       out:
         channels: [510415911560282132, 511870279157284874]
