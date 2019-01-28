@@ -1,6 +1,8 @@
 # Changelog
 
+#### 27 Jan 2019
 
+* Antiraid! Check the censor plugin for details
 
 #### 24 Jan 2019
 
