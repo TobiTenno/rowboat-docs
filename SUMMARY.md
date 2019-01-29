@@ -17,6 +17,7 @@
   * [Admin Plugin](plugins/admin.md)
   * [Utility Plugin](plugins/utility.md)
   * [Infractions Plugin](plugins/infractions.md)
+  * [AutoLevel Plugin](plugins/autolevel-plugin.md)
   * [Tags Plugin](plugins/tags-plugin.md)
   * [Custom Commands Plugin](plugins/custom-commands-plugin.md)
   * [SQL Plugin](plugins/sql-plugin.md)

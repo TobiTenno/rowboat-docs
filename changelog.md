@@ -1,5 +1,9 @@
 # Changelog
 
+#### 29 Jan 2019
+
+* New plugin!! Autolevel that reward roles for users participation in chat!
+
 #### 27 Jan 2019
 
 * Antiraid! Check the censor plugin for details
