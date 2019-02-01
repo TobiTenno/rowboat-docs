@@ -1,5 +1,10 @@
 # Changelog
 
+#### 31 Jan 2019
+
+* Reddit notify role
+* `clean` deletes command
+
 #### 29 Jan 2019
 
 * New plugin!! Autolevel that reward roles for users participation in chat!
