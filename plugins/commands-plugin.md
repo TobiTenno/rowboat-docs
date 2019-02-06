@@ -1,9 +1,3 @@
----
-description: >-
-  Controls usage of commands by level, channel, etc. There is a special case for
-  the name, which controls all tag usage.
----
-
 # Commands Plugin
 
 ## Configuration Options

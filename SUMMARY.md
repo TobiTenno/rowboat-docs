@@ -1,8 +1,8 @@
 # Table of contents
 
 * [Home](README.md)
-* [What is Heimdallr](src.md)
 * [Summary](summary.md)
+* [What is Heimdallr](src.md)
 * [General Configuration](general.md)
 * [Moderator Command Quick-Reference](moderator.md)
 * [Setting Up Heimdallr](setup.md)

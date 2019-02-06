@@ -22,11 +22,62 @@ The utility plugin provides a number of useful and fun commands
 | `!server [guild]` | Returns information on the current server or the Server ID if given | Default | `!server` OR `!server 290923757399310337` |
 | `!avatar {user}` | Displays user's avater | Default | `!avatar b1nzy` |
 
+## Configuration Options
+
+| Option | Description | Type | Default |
+| :--- | :--- | :--- | :--- |
+| announce | Channels that can be announced into | dict | empty |
+| auto\_clean | Channels that can be autocleaned | dict | empty |
+| reaction\_roles | MessageID of message to attach reactions with roles against | dict | empty |
+
+## Announce Configuration Options
+
+| Option | Description | Type | Default |
+| :--- | :--- | :--- | :--- |
+| webhook\_id | ID of webhook to post to | str | empty |
+| webhook\_color | Color of webhook embed | int | 0x000000 |
+| webhook\_name | Username for webhook | str | Guild Name |
+| webhook\_avatar | Avatar URL for webhook "user" | str | None |
+
+## Autoclean  Configuration Options
+
+| Option | Description | Type | Default |
+| :--- | :--- | :--- | :--- |
+| timeout | Time to wait before deleting \(seconds\) | int | None |
+
+## Reaction Roles Configuration Options
+
+| Option | Description | Type | Default |
+| :--- | :--- | :--- | :--- |
+| emoji | Dict containing the emoji id and a list of role ids. \(It is also possible to include an inbuilt emoji name in place of the emoji id\) | dict | empty |
+
 ## Configuration Example
 
-```text
-utilities: {}
+```yaml
+utilities:
+  announce:
+    32490583480348083409:
+      webhook_id: 304958304934209534
+      webhook_color: 0xffffff
+      webhook_name: Heimdallr
+      webhook_avatar: https://i.imgur.com/3cOLFsb.png
+  auto_clean:
+    32490583480348083409:
+      timeout: 3600
+  reaction_roles:
+      540540948065550348:
+        emoji:
+          506810410650042389:
+            - 540558688960774165
+          506810368740556802:
+            - 540558657243447306
+          510489235267125260: 
+            - 540565706190749700
+            - 540565747840188448
+          zero:
+            - 238947234897234897
+            - 238947234897234487
+          one:
+            - 238947234897234845
 ```
-
-There is no further configuration for this plugin.
 

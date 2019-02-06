@@ -3,7 +3,11 @@
 #### 31 Jan 2019
 
 * Reddit notify role
+* Fixed some reddit plugin unescape issues
 * `clean` deletes command
+* Announcement config and command to send announcements to a channel
+* Autoclean configuration
+* Reaction based roles
 
 #### 29 Jan 2019
 
