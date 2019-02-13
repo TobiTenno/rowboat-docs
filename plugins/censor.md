@@ -68,7 +68,7 @@ This, combined with the Spam plugin can result in a very robust automatic abuse-
 | invites\_guild\_whitelist | A list of whitelisted guild IDs for invite codes | list | empty |
 | invites\_whitelist | A list of whitelisted invite codes or vanities | list | empty |
 | invites\_blacklist | A list of blacklisted invite codes or vanities | list | empty |
-| filter\_domains | Whether to filter the domains contained within URLs | bool | true |
+| filter\_domains | Whether to filter the domains contained within URLs. Enables or disables domain filtering functionality. | bool | true |
 | domains\_whitelist | A whitelist of domain names | list | empty |
 | domains\_blacklist | A blacklist of domain names | list | empty |
 | blocked\_tokens | A list of tokens \(can appear in the middle of words\) that are blacklisted | list | empty |
