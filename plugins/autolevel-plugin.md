@@ -54,10 +54,10 @@ The heimdallr autoleveling system also provides a means to have multiple guild l
         currently.</td>
       <td style="text-align:left">Moderator</td>
       <td style="text-align:left">
-        <p><code>!alevel show [user]</code>
+        <p><code>!alevel show 76685590585671680</code>
         </p>
         <p>or</p>
-        <p><code>!alevel ls [user]</code>
+        <p><code>!alevel ls 76685590585671680</code>
         </p>
       </td>
     </tr>
@@ -93,10 +93,10 @@ The heimdallr autoleveling system also provides a means to have multiple guild l
         exist.</td>
       <td style="text-align:left">Administrator</td>
       <td style="text-align:left">
-        <p><code>!alevel give {user} {points} [index]</code>
+        <p><code>!alevel give 76685590585671680 10000 0:0</code>
         </p>
         <p>or</p>
-        <p><code>!alevel add {user} {points} [index]</code>
+        <p><code>!alevel add 76685590585671680 1000 0:0</code>
         </p>
       </td>
     </tr>
@@ -132,7 +132,7 @@ The heimdallr autoleveling system also provides a means to have multiple guild l
         <p>Global</p>
         <p>+ Admin</p>
       </td>
-      <td style="text-align:left"><code>!alevel import {type} {guildid} [index]</code>
+      <td style="text-align:left"><code>!alevel import tatsumaki 76685590585671680  [index]</code>
       </td>
     </tr>
   </tbody>
@@ -271,6 +271,13 @@ The heimdallr autoleveling system also provides a means to have multiple guild l
       <td style="text-align:left">Dict containing a category id and configuration using all above options
         except another category</td>
       <td style="text-align:left">dict</td>
+      <td style="text-align:left">None</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">level_footer_url</td>
+      <td style="text-align:left">Image URL (must be real, well-formed) for the level footer. Will default
+        level footer to guild icon if not defined.</td>
+      <td style="text-align:left">str</td>
       <td style="text-align:left">None</td>
     </tr>
   </tbody>
