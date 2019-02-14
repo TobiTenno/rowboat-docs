@@ -16,12 +16,30 @@ The heimdallr autoleveling system also provides a means to have multiple guild l
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><code>!level</code>
+      <td style="text-align:left">
+        <p><code>!level</code>
+        </p>
+        <p>or</p>
+        <p><code>!rank</code>
+        </p>
       </td>
       <td style="text-align:left">Shows the users current points and levels in the current location that
         the command is run.</td>
       <td style="text-align:left">0</td>
-      <td style="text-align:left"><code>!level</code>
+      <td style="text-align:left">
+        <p><code>!level</code>
+        </p>
+        <p>or</p>
+        <p><code>!rank</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>!top</code>
+      </td>
+      <td style="text-align:left">Shows guild top 10 plus your ranking in the guild</td>
+      <td style="text-align:left">0</td>
+      <td style="text-align:left"><code>!top</code>
       </td>
     </tr>
     <tr>
@@ -40,6 +58,25 @@ The heimdallr autoleveling system also provides a means to have multiple guild l
         </p>
         <p>or</p>
         <p><code>!alevel ls [user]</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <p><code>!alevel level [rank]</code>
+        </p>
+        <p>or</p>
+        <p><code>!alevel rank [rank]</code>
+        </p>
+      </td>
+      <td style="text-align:left">Displays how many points are required to reach a specific rank. Can be
+        used to determine how many points to set in the config.</td>
+      <td style="text-align:left">Moderator</td>
+      <td style="text-align:left">
+        <p><code>!alevel level [rank]</code>
+        </p>
+        <p>or</p>
+        <p><code>!alevel rank [rank]</code>
         </p>
       </td>
     </tr>
@@ -81,6 +118,21 @@ The heimdallr autoleveling system also provides a means to have multiple guild l
         <p>or</p>
         <p><code>!alevel rm  {user} {points} [index]</code>
         </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>!alevel import {type} {guildid} [index]</code>
+      </td>
+      <td style="text-align:left">
+        <p>Allows importing of mee6 or tatsumaki scores into a guild.</p>
+        <p>type can be either <code>mee6</code> or <code>tatsumaki</code>
+        </p>
+      </td>
+      <td style="text-align:left">
+        <p>Global</p>
+        <p>+ Admin</p>
+      </td>
+      <td style="text-align:left"><code>!alevel import {type} {guildid} [index]</code>
       </td>
     </tr>
   </tbody>
@@ -167,6 +219,15 @@ The heimdallr autoleveling system also provides a means to have multiple guild l
       <td style="text-align:left">None</td>
     </tr>
     <tr>
+      <td style="text-align:left">weight</td>
+      <td style="text-align:left">Applies a weighting to each multiplier type. For example the default weighting
+        for message is 5 and the default multiple for message is 25. Weight will
+        +/- the weight (5) and the points awarded will fall within this range (20-30).</td>
+      <td
+      style="text-align:left">dict</td>
+        <td style="text-align:left">None</td>
+    </tr>
+    <tr>
       <td style="text-align:left">levels</td>
       <td style="text-align:left">Dict defining the number of points and the appropriate role that will
         be added to the user.</td>
@@ -213,12 +274,20 @@ The heimdallr autoleveling system also provides a means to have multiple guild l
       <td style="text-align:left">None</td>
     </tr>
   </tbody>
-</table>##  Levels Sub Configuration
+</table>##  Multiplier Sub Configuration
 
 | Option | Description | Type | Default |
 | :--- | :--- | :--- | :--- |
 | message | Number of points per message | int | 25 |
 | voice | Number of points per 1 minute of voice activity | int | 25 |
+
+## Weight Sub Configuration
+
+| Option | Description | Type | Default |
+| :--- | :--- | :--- | :--- |
+| message | +/- how many points of multiplier message points | int | 5 |
+| voice | +/- how many points of multiplier voice points | int | 5 |
+| seconds | +/- how many seconds of seconds\_per\_point | int | 15 |
 
 ## Configuration Example
 
@@ -244,6 +313,10 @@ autolevel:
         voice: 25
       multiplier_roles:
         536728691795951619: 2
+      weight:
+        message: 2
+        voice: 10
+        seconds: 4
       levels:
         500: 2385947349805897345
         1500: 3245987345987345987
@@ -266,5 +339,14 @@ autolevel:
       seconds_per_point: 30
       keep_previous: true
     
+```
+
+## Notes
+
+The autolevel plugin requires an option to be set in the `config.yaml` for the tatsumaki API key.
+
+```yaml
+other:
+  TATSUMAKI_API_KEY: '3298472389-4723948723-498723'
 ```
 
