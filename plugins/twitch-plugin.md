@@ -67,8 +67,8 @@ This includes the dynamic assignment of roles which can be used to hoist current
     </tr>
     <tr>
       <td style="text-align:left">no_embed</td>
-      <td style="text-align:left">If set to <code>False</code> no embed will be used in the announcement.
-        Only the message will be shown</td>
+      <td style="text-align:left">If set to <code>True</code> no embed will be used in the announcement. Only
+        the message will be shown</td>
       <td style="text-align:left">bool</td>
       <td style="text-align:left">False</td>
     </tr>
