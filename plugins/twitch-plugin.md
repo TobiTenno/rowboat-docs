@@ -113,6 +113,14 @@ This includes the dynamic assignment of roles which can be used to hoist current
       <td style="text-align:left">str list</td>
       <td style="text-align:left">None</td>
     </tr>
+    <tr>
+      <td style="text-align:left">channel_id</td>
+      <td style="text-align:left">Channel id used if the config is set to a unicode string. This allows
+        the same channel to have multiple configurations by having different unicode
+        string configs</td>
+      <td style="text-align:left">snowflake</td>
+      <td style="text-align:left">None</td>
+    </tr>
   </tbody>
 </table>## Configuration Example
 
@@ -153,6 +161,34 @@ twitch:
       message: |-
         {r1234567890122334} {user} is being totally awesome and
         streaming right now you should check it out!!
+```
+
+It should be noted that it is also possible to specify the configs as a unicode string thus allowing multiple configurations for the same channel as follows:
+
+```yaml
+twitch:
+  configs:
+    devstream:
+      channel_id: 297917022300274688
+      streams:
+        - warframe
+      title_re: 'devstream'
+      message: |-
+        DevStream is now live!
+    ps4:
+      channel_id: 297917022300274688
+      streams:
+        - warframe
+      title_re: 'ps4 @ 4'
+      message: |-
+        PS4 @ 4 is now live!
+    xbox:
+      channel_id: 297917022300274688
+      streams:
+        - warframe
+      title_re: 'xbox one @ 1'
+      message: |-
+        XB1 @ 1 is now live!
 ```
 
 ## Notes

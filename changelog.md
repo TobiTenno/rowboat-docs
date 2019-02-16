@@ -1,5 +1,21 @@
 # Changelog
 
+#### 17 Feb 2019
+
+* Auto level VC issues are fixed
+* Twitch plugin
+  * Can set configs to strings now. This means you can have the same channel multiple times
+    * Allows setting channel\_id in each config to specify the channel id
+  * Fixed regex issues when specifying custom messages
+  * Embeds and message now use the display name not the login name
+* Discord invites in censor plugin are escaped
+* Clean all and clear will no longer delete pinned messages
+* Cleaned up role reactions
+  * Reactions that should not be on a message will be removed \(Slowly so it doesn't hit rate limits\)
+  * Specifying `join_only` or `leave_only` as an emoji list item will set that reaction to only allow the role to be joined or left but not both.
+* Reworked most of the mass infraction commands. No timeouts will occur meaning you can mass ban etc quickly as expected.
+* Tags with PNG and JPEG should correctly attach the picture and NOT include the URL
+
 #### 15 Feb 2019
 
 * Twitch plugin!! xD

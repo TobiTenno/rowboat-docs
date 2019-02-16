@@ -48,11 +48,35 @@ The utility plugin provides a number of useful and fun commands
 
 ## Reaction Roles Configuration Options
 
-| Option | Description | Type | Default |
-| :--- | :--- | :--- | :--- |
-| emoji | Dict containing the emoji id and a list of role ids. \(It is also possible to include an inbuilt emoji name in place of the emoji id\) | dict | empty |
-
-## Configuration Example
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Option</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">emoji</td>
+      <td style="text-align:left">
+        <p>Dict containing the emoji id and a list of role ids. (It is also possible
+          to include an inbuilt emoji name in place of the emoji id)</p>
+        <p>Also note that if one of the roles is set to either of below it will force
+          that reaction to only allow join or leave of such roles:</p>
+        <ul>
+          <li><code>join_only</code>
+          </li>
+          <li><code>leave_only</code>
+          </li>
+        </ul>
+      </td>
+      <td style="text-align:left">dict</td>
+      <td style="text-align:left">empty</td>
+    </tr>
+  </tbody>
+</table>## Configuration Example
 
 ```yaml
 utilities:
@@ -80,5 +104,11 @@ utilities:
             - 238947234897234487
           one:
             - 238947234897234845
+          regional_indicator_j:
+            - join_only
+            - 1328971238971239871
+          regional_indicator_l:
+            - leave_only
+            - 1328971238971239871
 ```
 
