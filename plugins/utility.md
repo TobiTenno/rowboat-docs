@@ -22,6 +22,7 @@ The utility plugin provides a number of useful and fun commands
 | `!server [guild]` | Returns information on the current server or the Server ID if given | Default | `!server` OR `!server 290923757399310337` |
 | `!avatar {user}` | Displays user's avater | Default | `!avatar b1nzy` |
 | `!announce {channel} {message}` | Announce message to channel. Channel must have configuration in the utility plugin configuration | Admin | `!announce #community-news it's a me, mario!` |
+| `!log warning/debug/info` | Set logging level for the bot | GA | `!log warning` |
 
 ## Configuration Options
 

@@ -1,5 +1,14 @@
 # Changelog
 
+#### 19 Feb 2019
+
+* Bug fixes for undefined prefixes in channel configs
+* Bug fixes for nickname censor
+* Control messages for reloading plugins
+* Control messages for guild join/leave
+* Change default logging to WARNING, command to change log level at will
+* \(In progress\) Webhooks for twitch notifications
+
 #### 17 Feb 2019
 
 * Auto level VC issues are fixed
