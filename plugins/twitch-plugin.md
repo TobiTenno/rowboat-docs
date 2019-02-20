@@ -121,6 +121,13 @@ This includes the dynamic assignment of roles which can be used to hoist current
       <td style="text-align:left">snowflake</td>
       <td style="text-align:left">None</td>
     </tr>
+    <tr>
+      <td style="text-align:left">webhook_id</td>
+      <td style="text-align:left">Id of webhook to send notifications to. Allows faster/less rate-limited
+        delivery, shows streamer avatar/name as avatar/title.</td>
+      <td style="text-align:left">snowflake</td>
+      <td style="text-align:left">None</td>
+    </tr>
   </tbody>
 </table>## Configuration Example
 
@@ -170,6 +177,7 @@ twitch:
   configs:
     devstream:
       channel_id: 297917022300274688
+      webhook_id: 297917022300274602
       streams:
         - warframe
       title_re: 'devstream'

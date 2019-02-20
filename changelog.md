@@ -1,5 +1,11 @@
 # Changelog
 
+#### 20 Feb 2019
+
+* Twitch notification webhooks
+* Twitch notification streamer name/avatar
+* Twitch notification footer \(twitch logo, Live @ time\)
+
 #### 19 Feb 2019
 
 * Bug fixes for undefined prefixes in channel configs
