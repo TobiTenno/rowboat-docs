@@ -1,5 +1,9 @@
 # Changelog
 
+#### 22 Feb 2019
+
+* Ability to turn off twitch announcing the stream, still granting a role if one is specified to grant to those streaming.
+
 #### 20 Feb 2019
 
 * Twitch notification webhooks

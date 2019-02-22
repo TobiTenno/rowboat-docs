@@ -56,7 +56,9 @@ This includes the dynamic assignment of roles which can be used to hoist current
       <td style="text-align:left">message</td>
       <td style="text-align:left">
         <p>Custom announce message. The following tokens can be used:</p>
-        <p><code>{user}</code> Streamers username</p>
+        <p><code>{user}</code> Streamers username
+          <br /><code>{game}</code> Current game
+          <br /><code>{title}</code> Current title</p>
         <p><code>{here}</code> @here</p>
         <p><code>{everyone}</code> @everyone</p>
         <p><code>{r123456789012}</code> @role</p>
@@ -127,6 +129,22 @@ This includes the dynamic assignment of roles which can be used to hoist current
         delivery, shows streamer avatar/name as avatar/title.</td>
       <td style="text-align:left">snowflake</td>
       <td style="text-align:left">None</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">safe</td>
+      <td style="text-align:left">safe can only be used with <code>streams</code> it allows re-announcements
+        to occur if the streamer changes games by setting the value to <code>False</code>
+      </td>
+      <td style="text-align:left">bool</td>
+      <td style="text-align:left">True</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">announce</td>
+      <td style="text-align:left">Used to disable announcements. An example of disabling announcements would
+        be if you want to hoist via <code>add_roles</code> but you don't want an
+        announcement</td>
+      <td style="text-align:left">bool</td>
+      <td style="text-align:left">True</td>
     </tr>
   </tbody>
 </table>## Configuration Example
