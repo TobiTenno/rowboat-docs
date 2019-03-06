@@ -39,6 +39,7 @@ The admin plugin provides a set of administrator commands that help in moderatin
 | `!unshut` | Removes restrictions on speak and voice activation detection for the `@everyone` role. Must be in the voice channel. | Mod | `!unshut` |
 | `!minfo {user}` | Mobile Mod trigger on user | Mod | `!minfo 76685590585671680` |
 |  🔗reaction | Mobile Mod trigger on user | Mod | React to message with 🔗 |
+| `!v-snap` | Returns a list of the members currently in Voice Chat with the current user with their ids. | Mod | `!v-snap` |
 
 ## Configuration Options
 

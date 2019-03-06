@@ -89,8 +89,8 @@ The heimdallr autoleveling system also provides a means to have multiple guild l
         </p>
       </td>
       <td style="text-align:left">Adds a specified number of points to the user in the specified index.
-        If no index is selected the default '0:0' is used which may or may not
-        exist.</td>
+        If no index is selected the default &apos;0:0&apos; is used which may or
+        may not exist.</td>
       <td style="text-align:left">Administrator</td>
       <td style="text-align:left">
         <p><code>!alevel give 76685590585671680 10000 0:0</code>
@@ -109,8 +109,8 @@ The heimdallr autoleveling system also provides a means to have multiple guild l
         </p>
       </td>
       <td style="text-align:left">Removes a specified number of points to the user in the specified index.
-        If no index is selected the default '0:0' is used which may or may not
-        exist.</td>
+        If no index is selected the default &apos;0:0&apos; is used which may or
+        may not exist.</td>
       <td style="text-align:left">Administrator</td>
       <td style="text-align:left">
         <p><code>!alevel take {user} {points} [index]</code>
@@ -255,7 +255,7 @@ The heimdallr autoleveling system also provides a means to have multiple guild l
     </tr>
     <tr>
       <td style="text-align:left">announce_dm</td>
-      <td style="text-align:left">If the message will be DM'd to the user</td>
+      <td style="text-align:left">If the message will be DM&apos;d to the user</td>
       <td style="text-align:left">bool</td>
       <td style="text-align:left">False</td>
     </tr>

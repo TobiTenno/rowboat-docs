@@ -33,22 +33,22 @@ This includes the dynamic assignment of roles which can be used to hoist current
     </tr>
     <tr>
       <td style="text-align:left">add_roles</td>
-      <td style="text-align:left">List of role id's that will be added to the user when streaming. This
-        can be used to hoist the users for example</td>
+      <td style="text-align:left">List of role id&apos;s that will be added to the user when streaming.
+        This can be used to hoist the users for example</td>
       <td style="text-align:left">snowflake list</td>
       <td style="text-align:left">[]</td>
     </tr>
     <tr>
       <td style="text-align:left">ignore_roles</td>
-      <td style="text-align:left">List of role id's that will be ignored, even if the user belongs to the
-        stream_role</td>
+      <td style="text-align:left">List of role id&apos;s that will be ignored, even if the user belongs
+        to the stream_role</td>
       <td style="text-align:left">snowflake list</td>
       <td style="text-align:left">[]</td>
     </tr>
     <tr>
       <td style="text-align:left">ignore_users</td>
-      <td style="text-align:left">List of user id's that will be ignored for this channel, even if the user
-        belongs to the stream_role</td>
+      <td style="text-align:left">List of user id&apos;s that will be ignored for this channel, even if
+        the user belongs to the stream_role</td>
       <td style="text-align:left">snowflake list</td>
       <td style="text-align:left">[]</td>
     </tr>
@@ -141,8 +141,8 @@ This includes the dynamic assignment of roles which can be used to hoist current
     <tr>
       <td style="text-align:left">announce</td>
       <td style="text-align:left">Used to disable announcements. An example of disabling announcements would
-        be if you want to hoist via <code>add_roles</code> but you don't want an
-        announcement</td>
+        be if you want to hoist via <code>add_roles</code> but you don&apos;t want
+        an announcement</td>
       <td style="text-align:left">bool</td>
       <td style="text-align:left">True</td>
     </tr>

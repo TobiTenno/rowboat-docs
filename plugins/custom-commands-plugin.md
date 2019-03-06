@@ -125,9 +125,7 @@ All commands in custom commands are configured to ADMIN \(level 100\) due to how
         every command that executes after the notify command</td>
     </tr>
     <tr>
-      <td style="text-align:left">addgroup
-        <rolename>
-      </td>
+      <td style="text-align:left">addgroup &lt;rolename&gt;</td>
       <td style="text-align:left">
         <p>Will add a role to the user running the command</p>
         <p>E.g. <code>addgroup &lt;rolename&gt;</code>
@@ -135,9 +133,7 @@ All commands in custom commands are configured to ADMIN \(level 100\) due to how
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">removegroup
-        <rolename>
-      </td>
+      <td style="text-align:left">removegroup &lt;rolename&gt;</td>
       <td style="text-align:left">
         <p>Will remove a role from the user running the command</p>
         <p>E.g. <code>removegroup &lt;rolename&gt;</code>
@@ -145,9 +141,7 @@ All commands in custom commands are configured to ADMIN \(level 100\) due to how
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">addgrouptemp
-        <rolename>
-          <duration>[reason]</td>
+      <td style="text-align:left">addgrouptemp &lt;rolename&gt; &lt;duration&gt; [reason]</td>
       <td style="text-align:left">
         <p>Will add a temp role to the user for the defined duration</p>
         <p>E.g. <code>addgrouptemp &lt;rolename&gt; &lt;duration&gt; [reason]</code>
@@ -163,8 +157,7 @@ All commands in custom commands are configured to ADMIN \(level 100\) due to how
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">tempban
-        <duration>[reason]</td>
+      <td style="text-align:left">tempban &lt;duration&gt; [reason]</td>
       <td style="text-align:left">
         <p>Will temp ban the user for the defined duration</p>
         <p>E.g <code>tempban &lt;duration&gt; [reason]</code>
@@ -212,8 +205,7 @@ All commands in custom commands are configured to ADMIN \(level 100\) due to how
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">tempmute
-        <duration>[reason]</td>
+      <td style="text-align:left">tempmute &lt;duration&gt; [reason]</td>
       <td style="text-align:left">
         <p>Will mute the user for the defined duration</p>
         <p>E.g. <code>tempmute &lt;duration&gt; [reason]</code>
@@ -221,8 +213,7 @@ All commands in custom commands are configured to ADMIN \(level 100\) due to how
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">tempmutehard
-        <duration>[reason]</td>
+      <td style="text-align:left">tempmutehard &lt;duration&gt; [reason]</td>
       <td style="text-align:left">
         <p>Will hard mute the user for the defined duration</p>
         <p>E.g. <code>tempmutehard &lt;duration&gt; [reason]</code>
@@ -317,8 +308,7 @@ The configuration for this plugin uses the commands plugin within core.py to app
         </p>
         <p> <code>     level: 100</code>
         </p>
-        <p><code></code>
-        </p>
+        <p>&lt;code&gt;&lt;/code&gt;</p>
         <p>This should also be channel locked as a recommendation:</p>
         <p><code>commands:</code>
         </p>
@@ -331,9 +321,7 @@ The configuration for this plugin uses the commands plugin within core.py to app
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">
-        <custcmdname>
-      </td>
+      <td style="text-align:left">&lt;custcmdname&gt;</td>
       <td style="text-align:left">When you have created a custom command you should use similar config as
         shown above in cc-usr example with a level of 0 or the required level including
         lockdown configuration</td>
