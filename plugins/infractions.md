@@ -4,45 +4,308 @@ The infractions plugin provides a set of useful moderator commands. These comman
 
 ## Commands
 
-| Name | Description | Default Level | Usage |
-| :--- | :--- | :--- | :--- |
-| `!warn {user} [reason]` | Adds a warning infraction to a user | Moderator | `!warn 232921983317180416 1st warning, spamming emoji` OR `!warn @rowboat#0001 2nd warning, going off-topic` |
-| `!mute {user} [reason]` | Mutes a user. This will only work if `mute_role` is set in the config | Moderator | `!mute 232921983317180416 spamming` OR  `!tempmute @rowboat#0001 60m spamming` |
-| `!unmute {user}` | Unmutes a user | Moderator | `!unmute 232921983317180416` |
-| `!tempmute {user} {duration} [reason]` | Temporarily mutes a user. Will only work if `temp_mute_role` or `mute_role` is set in the config | Moderator | `!tempmute 232921983317180416 30m spamming` OR `!tempmute @rowboat#0001 30m spamming` |
-| `!kick {user} [reason]` | Kicks the user from the server | Moderator | `!kick 232921983317180416 spamming` OR `!kick @rowboat#0001 spamming` |
-| `!mkick {users] -r [reason]` | Kicks multiple users from the server | Moderator | `!mkick 232921983317180416 80351110224678912 108598213681922048 -r spamming` |
-| `!ban {user} [reason]` | Bans a user from the server | Moderator | `!ban 232921983317180416 spamming` OR `!ban @rowboat#0001 spamming` |
-| `!unban {user} [reason]` | Unbans a user | Moderator | `!unban 232921983317180416` |
-| `!softban {user} [reason]` | Softbans \(bans/unbans\) a user and deletes the user's messages sent within the last 7 days | Moderator | `!softban 232921983317180416 spamming` OR `!softban @rowboat#0001 spamming` |
-| `!tempban {user} {duration} [reason]` | Temporarily bans a user | Moderator | `!tempban 232921983317180416 5h spamming` OR `!tempban @rowboat#0001 5h spamming` |
-| `!inf archive` | Creates a CSV file of all infractions on the server | Administrator | `!infractions archive` |
-| `!inf search {query}` | Searches infractions database for given query | Moderator | `!inf search 232921983317180416` OR `!inf search rowboat#0001` OR `!inf search spamming` |
-| `!inf info {inf#}` | Presents information on the given infraction | Moderator | `!inf info 1274` |
-| `!inf delete {inf#}` | Delete infraction | Admin | `!inf delete 1274` |
-| `!inf duration {inf#} {duration}` | Updates the duration of the given infraction. Duration starts from time of initial action | Moderator | `!inf duration 1274 5h` |
-| `!inf reason {inf#} {reason}` | Updates the reason of a given infraction | Moderator | `!inf reason 1274 rude behaviour towards staff` |
-| `!slowmo {time in seconds}` | Sets the slowmode time for the channel | Moderator | `!slowmo 10` |
-| `!slowmo 0` | Turn off slowmode for the channel | Moderator | `!slowmo 0` |
-| `!report {message}` | Send a report to a report channel | Everyone | `!report @Tobiah is being a meanie` |
-| `!selfmute / muteself {duration}` | Mute yourself for the given duration. Maximum of `2w` | Everyone | `!selfmute 2m` |
-| `!note add {user} {note}` | Add a note on a user | Mod | `!note add 222617379421683712 omaiwamo shinderu` |
-| `!note delete {inf#}` | Delete note on user | Admin | `!note delete 1275` |
-| `!note info {inf#}` | Get full details on a note | Mod | `!note info 1275` |
-| `!note search {query}` | Search for a note with the specified query | Mod | `!note search @user1` |
-| `!inf recent {# recent}` | Get recent infractions | Mod | `!inf recent 5` |
-| `!note archive` | Get an archive of notes | Admin | `!note archive` |
-| `!temprole {user} {role} {duration} {reason}` | Adds a role temporarily to a user | Mod | `!temprole @user1 StronkRole 1h stronk for 1h` |
-| `!hardmute enable {user} {reason}` | Hard mutes a user | Mod | `!hardmute enable @user1 being really silly` |
-| `!hardmute temp {user} {duration} {reason}` | Hard mutes a user temporarily | Mod | `!hardmute temp @user1 6h being really silly` |
-| `!hardmute disable {user}` | Disables an active hard mute on a user | Mod | `!hardmute disable @user1` |
-| `!mban {users] -r [reason]` | Bans multiple users from the server | Moderator | `!mban 232921983317180416 80351110224678912 108598213681922048 -r spamming` |
-| `!munban {users] -r [reason]` | Unbans multiple users from the server | Moderator | `!munban 232921983317180416 80351110224678912 108598213681922048 -r spamming` |
-| `!mmute {users] -r [reason]` | Mutes multiple users on the server | Moderator | `!mmute 232921983317180416 80351110224678912 108598213681922048 -r spamming` |
-| `!munmute {users] -r [reason]` | Unmute multiple users on the server | Moderator | `!munmute 232921983317180416 80351110224678912 108598213681922048 -r spamming` |
-| `!timeleft` | Allow muted user to check their remaining time in their mute | Default | `!timeleft` |
-
-## Configuration Options
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Name</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Default Level</th>
+      <th style="text-align:left">Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>!warn {user} [reason]</code>
+      </td>
+      <td style="text-align:left">Adds a warning infraction to a user</td>
+      <td style="text-align:left">Moderator</td>
+      <td style="text-align:left"><code>!warn 232921983317180416 1st warning, spamming emoji</code> OR <code>!warn @rowboat#0001 2nd warning, going off-topic</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>!mute {user} [reason]</code>
+      </td>
+      <td style="text-align:left">Mutes a user. This will only work if <code>mute_role</code> is set in the
+        config</td>
+      <td style="text-align:left">Moderator</td>
+      <td style="text-align:left"><code>!mute 232921983317180416 spamming</code> OR <code>!tempmute @rowboat#0001 60m spamming</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>!unmute {user}</code>
+      </td>
+      <td style="text-align:left">Unmutes a user</td>
+      <td style="text-align:left">Moderator</td>
+      <td style="text-align:left"><code>!unmute 232921983317180416</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>!tempmute {user} {duration} [reason]</code>
+      </td>
+      <td style="text-align:left">Temporarily mutes a user. Will only work if <code>temp_mute_role</code> or <code>mute_role</code> is
+        set in the config</td>
+      <td style="text-align:left">Moderator</td>
+      <td style="text-align:left">
+        <p><code>!mute 232921983317180416 30m spamming</code>
+        </p>
+        <p>OR</p>
+        <p><code>!tempmute 232921983317180416 30m spamming</code> OR <code>!tempmute @rowboat#0001 30m spamming</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>!kick {user} [reason]</code>
+      </td>
+      <td style="text-align:left">Kicks the user from the server</td>
+      <td style="text-align:left">Moderator</td>
+      <td style="text-align:left"><code>!kick 232921983317180416 spamming</code> OR <code>!kick @rowboat#0001 spamming</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>!mkick {users] -r [reason]</code>
+      </td>
+      <td style="text-align:left">Kicks multiple users from the server</td>
+      <td style="text-align:left">Moderator</td>
+      <td style="text-align:left"><code>!mkick 232921983317180416 80351110224678912 108598213681922048 -r spamming</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>!ban {user} [reason]</code>
+      </td>
+      <td style="text-align:left">Bans a user from the server</td>
+      <td style="text-align:left">Moderator</td>
+      <td style="text-align:left"><code>!ban 232921983317180416 spamming</code> OR <code>!ban @rowboat#0001 spamming</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>!unban {user} [reason]</code>
+      </td>
+      <td style="text-align:left">Unbans a user</td>
+      <td style="text-align:left">Moderator</td>
+      <td style="text-align:left"><code>!unban 232921983317180416</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>!softban {user} [reason]</code>
+      </td>
+      <td style="text-align:left">Softbans (bans/unbans) a user and deletes the user&apos;s messages sent
+        within the last 7 days</td>
+      <td style="text-align:left">Moderator</td>
+      <td style="text-align:left"><code>!softban 232921983317180416 spamming</code> OR <code>!softban @rowboat#0001 spamming</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>!tempban {user} {duration} [reason]</code>
+      </td>
+      <td style="text-align:left">Temporarily bans a user</td>
+      <td style="text-align:left">Moderator</td>
+      <td style="text-align:left"><code>!tempban 232921983317180416 5h spamming</code> OR <code>!tempban @rowboat#0001 5h spamming</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>!inf archive</code>
+      </td>
+      <td style="text-align:left">Creates a CSV file of all infractions on the server</td>
+      <td style="text-align:left">Administrator</td>
+      <td style="text-align:left"><code>!infractions archive</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>!inf search {query}</code>
+      </td>
+      <td style="text-align:left">Searches infractions database for given query</td>
+      <td style="text-align:left">Moderator</td>
+      <td style="text-align:left"><code>!inf search 232921983317180416</code> OR <code>!inf search rowboat#0001</code> OR <code>!inf search spamming</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>!inf info {inf#}</code>
+      </td>
+      <td style="text-align:left">Presents information on the given infraction</td>
+      <td style="text-align:left">Moderator</td>
+      <td style="text-align:left"><code>!inf info 1274</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>!inf delete {inf#}</code>
+      </td>
+      <td style="text-align:left">Delete infraction</td>
+      <td style="text-align:left">Admin</td>
+      <td style="text-align:left"><code>!inf delete 1274</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>!inf duration {inf#} {duration}</code>
+      </td>
+      <td style="text-align:left">Updates the duration of the given infraction. Duration starts from time
+        of initial action</td>
+      <td style="text-align:left">Moderator</td>
+      <td style="text-align:left"><code>!inf duration 1274 5h</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>!inf reason {inf#} {reason}</code>
+      </td>
+      <td style="text-align:left">Updates the reason of a given infraction</td>
+      <td style="text-align:left">Moderator</td>
+      <td style="text-align:left"><code>!inf reason 1274 rude behaviour towards staff</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>!slowmo {time in seconds}</code>
+      </td>
+      <td style="text-align:left">Sets the slowmode time for the channel</td>
+      <td style="text-align:left">Moderator</td>
+      <td style="text-align:left"><code>!slowmo 10</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>!slowmo 0</code>
+      </td>
+      <td style="text-align:left">Turn off slowmode for the channel</td>
+      <td style="text-align:left">Moderator</td>
+      <td style="text-align:left"><code>!slowmo 0</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>!report {message}</code>
+      </td>
+      <td style="text-align:left">Send a report to a report channel</td>
+      <td style="text-align:left">Everyone</td>
+      <td style="text-align:left"><code>!report @Tobiah is being a meanie</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>!selfmute / muteself {duration}</code>
+      </td>
+      <td style="text-align:left">Mute yourself for the given duration. Maximum of <code>2w</code>
+      </td>
+      <td style="text-align:left">Everyone</td>
+      <td style="text-align:left"><code>!selfmute 2m</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>!note add {user} {note}</code>
+      </td>
+      <td style="text-align:left">Add a note on a user</td>
+      <td style="text-align:left">Mod</td>
+      <td style="text-align:left"><code>!note add 222617379421683712 omaiwamo shinderu</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>!note delete {inf#}</code>
+      </td>
+      <td style="text-align:left">Delete note on user</td>
+      <td style="text-align:left">Admin</td>
+      <td style="text-align:left"><code>!note delete 1275</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>!note info {inf#}</code>
+      </td>
+      <td style="text-align:left">Get full details on a note</td>
+      <td style="text-align:left">Mod</td>
+      <td style="text-align:left"><code>!note info 1275</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>!note search {query}</code>
+      </td>
+      <td style="text-align:left">Search for a note with the specified query</td>
+      <td style="text-align:left">Mod</td>
+      <td style="text-align:left"><code>!note search @user1</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>!inf recent {# recent}</code>
+      </td>
+      <td style="text-align:left">Get recent infractions</td>
+      <td style="text-align:left">Mod</td>
+      <td style="text-align:left"><code>!inf recent 5</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>!note archive</code>
+      </td>
+      <td style="text-align:left">Get an archive of notes</td>
+      <td style="text-align:left">Admin</td>
+      <td style="text-align:left"><code>!note archive</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>!temprole {user} {role} {duration} {reason}</code>
+      </td>
+      <td style="text-align:left">Adds a role temporarily to a user</td>
+      <td style="text-align:left">Mod</td>
+      <td style="text-align:left"><code>!temprole @user1 StronkRole 1h stronk for 1h</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>!hardmute enable {user} {reason}</code>
+      </td>
+      <td style="text-align:left">Hard mutes a user</td>
+      <td style="text-align:left">Mod</td>
+      <td style="text-align:left"><code>!hardmute enable @user1 being really silly</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>!hardmute temp {user} {duration} {reason}</code>
+      </td>
+      <td style="text-align:left">Hard mutes a user temporarily</td>
+      <td style="text-align:left">Mod</td>
+      <td style="text-align:left"><code>!hardmute temp @user1 6h being really silly</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>!hardmute disable {user}</code>
+      </td>
+      <td style="text-align:left">Disables an active hard mute on a user</td>
+      <td style="text-align:left">Mod</td>
+      <td style="text-align:left"><code>!hardmute disable @user1</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>!mban {users] -r [reason]</code>
+      </td>
+      <td style="text-align:left">Bans multiple users from the server</td>
+      <td style="text-align:left">Moderator</td>
+      <td style="text-align:left"><code>!mban 232921983317180416 80351110224678912 108598213681922048 -r spamming</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>!munban {users] -r [reason]</code>
+      </td>
+      <td style="text-align:left">Unbans multiple users from the server</td>
+      <td style="text-align:left">Moderator</td>
+      <td style="text-align:left"><code>!munban 232921983317180416 80351110224678912 108598213681922048 -r spamming</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>!mmute {users] -r [reason]</code>
+      </td>
+      <td style="text-align:left">Mutes multiple users on the server</td>
+      <td style="text-align:left">Moderator</td>
+      <td style="text-align:left"><code>!mmute 232921983317180416 80351110224678912 108598213681922048 -r spamming</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>!munmute {users] -r [reason]</code>
+      </td>
+      <td style="text-align:left">Unmute multiple users on the server</td>
+      <td style="text-align:left">Moderator</td>
+      <td style="text-align:left"><code>!munmute 232921983317180416 80351110224678912 108598213681922048 -r spamming</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>!timeleft</code>
+      </td>
+      <td style="text-align:left">Allow muted user to check their remaining time in their mute</td>
+      <td style="text-align:left">Default</td>
+      <td style="text-align:left"><code>!timeleft</code>
+      </td>
+    </tr>
+  </tbody>
+</table>## Configuration Options
 
 | Option | Description | Type | Default |
 | :--- | :--- | :--- | :--- |
