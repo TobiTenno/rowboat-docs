@@ -86,7 +86,7 @@ All commands in custom commands are configured to ADMIN \(level 100\) due to how
       <td style="text-align:left">
         <p>listen uses the disco defined listen handlers to perform actions automatically
           when the {listen_type} and its triggers are executed</p>
-        <p>E.g. <code>!cc create listen MessageCreate reply cats I like cats to</code>
+        <p>E.g. <code>!cc create cats listen MessageCreate reply cats I like cats to</code>
         </p>
         <p>When this command detects the string cats it will reply with <code>I like cats to</code>
         </p>
